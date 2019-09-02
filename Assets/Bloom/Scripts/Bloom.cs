@@ -67,10 +67,7 @@ namespace PostEffects
             shader = null;
         }
 
-        public void Apply (
-            RenderTexture source,
-            RenderTexture destination,
-            Vector2Int resolution)
+        public void Apply (RenderTexture source, RenderTexture destination, Vector2Int resolution)
         {
             Init();
             if (!inited) return;
