@@ -12,4 +12,4 @@ https://github.com/Unity-Technologies/PostProcessing
 
 ## License
 
-The code is available under the [MIT license](LICENSE.md)
+The code is available under the [MIT license](LICENSE)
