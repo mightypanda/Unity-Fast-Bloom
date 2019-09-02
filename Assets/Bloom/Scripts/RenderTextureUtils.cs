@@ -72,28 +72,28 @@ namespace PostEffects
         }
 
         public static Vector2Int GetScreenResolution (int resolution)
-		{
-			float aspectRatio = (float)Screen.width / (float)Screen.height;
-			if (aspectRatio < 1)
-				aspectRatio = 1f / aspectRatio;
+        {
+            float aspectRatio = (float)Screen.width / (float)Screen.height;
+            if (aspectRatio < 1)
+                aspectRatio = 1f / aspectRatio;
 
-			int min = resolution;
+            int min = resolution;
             int max = (int)((float)resolution * aspectRatio);
 
-			if (Screen.width > Screen.height)
-				return new Vector2Int(max, min);
-			else
-				return new Vector2Int(min, max);
-		}
+            if (Screen.width > Screen.height)
+                return new Vector2Int(max, min);
+            else
+                return new Vector2Int(min, max);
+        }
 
         public static Vector2 GetTextureScreenScale (Texture2D texture)
-		{
+        {
             if (texture == null) return Vector2.one;
 
-			Vector2 scale;
-			scale.x = (float)Screen.width / (float)texture.width;
-			scale.y = (float)Screen.height / (float)texture.height;
-			return scale;
-		}
+            Vector2 scale;
+            scale.x = (float)Screen.width / (float)texture.width;
+            scale.y = (float)Screen.height / (float)texture.height;
+            return scale;
+        }
     }
 }

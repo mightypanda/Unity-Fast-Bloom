@@ -56,10 +56,10 @@ namespace PostEffects
             displayMaterial = new Material(displayShader);
 
             var meshRenderer = GetComponent<MeshRenderer>();
-			meshRenderer.sharedMaterial = displayMaterial;
+            meshRenderer.sharedMaterial = displayMaterial;
 
             var meshFilter = GetComponent<MeshFilter>();
-			meshFilter.sharedMesh = CreateQuadMesh();
+            meshFilter.sharedMesh = CreateQuadMesh();
         }
 
         void Update ()
@@ -121,27 +121,27 @@ namespace PostEffects
         }
 
         Mesh CreateQuadMesh ()
-		{
-			var mesh = new Mesh();
-			mesh.hideFlags = HideFlags.HideAndDontSave;
-			mesh.vertices = new Vector3[4] {
-				new Vector3(-1, -1, 0),
-				new Vector3(-1, 1, 0),
-				new Vector3(1, 1, 0),
-				new Vector3(1, -1, 0)
-			};
-			mesh.uv = new Vector2[4] {
-				new Vector2(0, 0),
-				new Vector2(0, 1),
-				new Vector2(1, 1),
-				new Vector2(1, 0)
-			};
-			mesh.triangles = new int[6] {
-				2, 1, 0,
-				0, 3, 2
-			};
-			return mesh;
-		}
+        {
+            var mesh = new Mesh();
+            mesh.hideFlags = HideFlags.HideAndDontSave;
+            mesh.vertices = new Vector3[4] {
+                new Vector3(-1, -1, 0),
+                new Vector3(-1, 1, 0),
+                new Vector3(1, 1, 0),
+                new Vector3(1, -1, 0)
+            };
+            mesh.uv = new Vector2[4] {
+                new Vector2(0, 0),
+                new Vector2(0, 1),
+                new Vector2(1, 1),
+                new Vector2(1, 0)
+            };
+            mesh.triangles = new int[6] {
+                2, 1, 0,
+                0, 3, 2
+            };
+            return mesh;
+        }
 
         Material CreateMaterial (Shader shader)
         {

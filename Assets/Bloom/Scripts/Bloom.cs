@@ -4,7 +4,7 @@ using UnityEngine;
 namespace PostEffects
 {
     public class Bloom
-	{
+    {
         public Bloom (Shader shader)
         {
             this.shader = shader;
