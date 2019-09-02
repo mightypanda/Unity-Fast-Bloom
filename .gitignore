@@ -13,6 +13,8 @@ Desktop.ini
 *.swp
 
 # Unity
-/Library/
-Temp/
-Obj/
+/Library
+/Temp
+/Obj
+/Logs
+/Packages
